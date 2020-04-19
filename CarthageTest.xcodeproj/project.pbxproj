@@ -14,6 +14,8 @@
 		D94C3F6C244C283000498B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94C3F6B244C283000498B2A /* Assets.xcassets */; };
 		D94C3F6F244C283100498B2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94C3F6D244C283100498B2A /* LaunchScreen.storyboard */; };
 		D94C3F7A244C283100498B2A /* CarthageTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C3F79244C283100498B2A /* CarthageTestTests.swift */; };
+		D94C3F8A244C3B0700498B2A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94C3F85244C38E900498B2A /* RxSwift.framework */; };
+		D94C3F8F244C3BEF00498B2A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94C3F8E244C3BEF00498B2A /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		D94C3F75244C283100498B2A /* CarthageTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarthageTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94C3F79244C283100498B2A /* CarthageTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarthageTestTests.swift; sourceTree = "<group>"; };
 		D94C3F7B244C283100498B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D94C3F85244C38E900498B2A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		D94C3F8E244C3BEF00498B2A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94C3F8A244C3B0700498B2A /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94C3F8F244C3BEF00498B2A /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +70,7 @@
 				D94C3F61244C283000498B2A /* CarthageTest */,
 				D94C3F78244C283100498B2A /* CarthageTestTests */,
 				D94C3F60244C283000498B2A /* Products */,
+				D94C3F84244C38E900498B2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +106,15 @@
 			path = CarthageTestTests;
 			sourceTree = "<group>";
 		};
+		D94C3F84244C38E900498B2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D94C3F8E244C3BEF00498B2A /* Nimble.framework */,
+				D94C3F85244C38E900498B2A /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,6 +125,7 @@
 				D94C3F5B244C283000498B2A /* Sources */,
 				D94C3F5C244C283000498B2A /* Frameworks */,
 				D94C3F5D244C283000498B2A /* Resources */,
+				D94C3F8D244C3B3E00498B2A /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -126,6 +143,7 @@
 				D94C3F71244C283100498B2A /* Sources */,
 				D94C3F72244C283100498B2A /* Frameworks */,
 				D94C3F73244C283100498B2A /* Resources */,
+				D94C3F91244C3E6700498B2A /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -194,6 +212,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D94C3F8D244C3B3E00498B2A /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		D94C3F91244C3E6700498B2A /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D94C3F5B244C283000498B2A /* Sources */ = {
@@ -364,6 +425,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U45ZNT55FZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CarthageTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -382,6 +447,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U45ZNT55FZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CarthageTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,6 +470,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U45ZNT55FZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CarthageTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -423,6 +496,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U45ZNT55FZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CarthageTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
