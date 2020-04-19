@@ -15,8 +15,8 @@
 		D94C3F6C244C283000498B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94C3F6B244C283000498B2A /* Assets.xcassets */; };
 		D94C3F6F244C283100498B2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94C3F6D244C283100498B2A /* LaunchScreen.storyboard */; };
 		D94C3F7A244C283100498B2A /* CarthageTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C3F79244C283100498B2A /* CarthageTestTests.swift */; };
-		D94C3F8A244C3B0700498B2A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94C3F85244C38E900498B2A /* RxSwift.framework */; };
 		D94C3F8F244C3BEF00498B2A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94C3F8E244C3BEF00498B2A /* Nimble.framework */; };
+		D94E749F244C5EAF00E5F432 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94C3F85244C38E900498B2A /* RxSwift.framework */; };
 		D9AAC24E244C4E690043CB1A /* CarthageFrameworkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9AAC24D244C4E690043CB1A /* CarthageFrameworkTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +55,7 @@
 			files = (
 				D908E9DE244C555A00230298 /* SnapKit.framework in Frameworks */,
 				D9AAC24E244C4E690043CB1A /* CarthageFrameworkTest.framework in Frameworks */,
-				D94C3F8A244C3B0700498B2A /* RxSwift.framework in Frameworks */,
+				D94E749F244C5EAF00E5F432 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,17 +230,17 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CarthageFrameworkTest.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CarthageFrameworkTest.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -1,3 +1,4 @@
 github "ReactiveX/RxSwift" ~> 5.0
+github "sergiobaro/CarthageFrameworkTest" "0.1.0"
 
-git "file:///Users/sergiobaro/src/CarthageFrameworkTest" "master"
+# git "file:///Users/sergiobaro/src/CarthageFrameworkTest" "master"

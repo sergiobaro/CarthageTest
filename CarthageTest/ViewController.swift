@@ -7,16 +7,23 @@
 //
 
 import UIKit
+import RxSwift
 import CarthageFrameworkTest
 
 class ViewController: UIViewController {
 
+  private let disposeBag = DisposeBag()
+
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
 
-    let vc = CarthageFrameworkTest.ViewController(nibName: "ViewController", bundle: Bundle(for: CarthageFrameworkTest.ViewController.self))
-
-    let nc = UINavigationController(rootViewController: vc)
-    present(nc, animated: true)
+    Observable.just(())
+      .delay(.seconds(1), scheduler: MainScheduler.instance)
+      .subscribe(onNext: { [weak self] _ in
+        let vc = CarthageFrameworkTest.ViewController(nibName: "ViewController", bundle: Bundle(for: CarthageFrameworkTest.ViewController.self))
+        let nc = UINavigationController(rootViewController: vc)
+        self?.present(nc, animated: true)
+      })
+      .disposed(by: disposeBag)
   }
 }
