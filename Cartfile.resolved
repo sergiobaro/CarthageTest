@@ -1,4 +1,4 @@
+git "file:///Users/sergiobaro/src/CarthageFrameworkTest" "e4458b7bcec14f85e6bd4856a62b495f87bc230b"
 github "Quick/Nimble" "v8.0.7"
-github "Quick/Quick" "v2.2.0"
 github "ReactiveX/RxSwift" "5.1.1"
 github "SnapKit/SnapKit" "5.0.1"

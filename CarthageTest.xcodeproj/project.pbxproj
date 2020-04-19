@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D908E9DE244C555A00230298 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D908E9DD244C555A00230298 /* SnapKit.framework */; };
 		D94C3F63244C283000498B2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C3F62244C283000498B2A /* AppDelegate.swift */; };
 		D94C3F65244C283000498B2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C3F64244C283000498B2A /* SceneDelegate.swift */; };
 		D94C3F67244C283000498B2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C3F66244C283000498B2A /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 		D94C3F7A244C283100498B2A /* CarthageTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C3F79244C283100498B2A /* CarthageTestTests.swift */; };
 		D94C3F8A244C3B0700498B2A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94C3F85244C38E900498B2A /* RxSwift.framework */; };
 		D94C3F8F244C3BEF00498B2A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94C3F8E244C3BEF00498B2A /* Nimble.framework */; };
+		D9AAC24E244C4E690043CB1A /* CarthageFrameworkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9AAC24D244C4E690043CB1A /* CarthageFrameworkTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D908E9DD244C555A00230298 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		D94C3F5F244C283000498B2A /* CarthageTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarthageTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94C3F62244C283000498B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94C3F64244C283000498B2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		D94C3F7B244C283100498B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D94C3F85244C38E900498B2A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		D94C3F8E244C3BEF00498B2A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		D9AAC24D244C4E690043CB1A /* CarthageFrameworkTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CarthageFrameworkTest.framework; path = Carthage/Build/iOS/CarthageFrameworkTest.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D908E9DE244C555A00230298 /* SnapKit.framework in Frameworks */,
+				D9AAC24E244C4E690043CB1A /* CarthageFrameworkTest.framework in Frameworks */,
 				D94C3F8A244C3B0700498B2A /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +115,8 @@
 		D94C3F84244C38E900498B2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D908E9DD244C555A00230298 /* SnapKit.framework */,
+				D9AAC24D244C4E690043CB1A /* CarthageFrameworkTest.framework */,
 				D94C3F8E244C3BEF00498B2A /* Nimble.framework */,
 				D94C3F85244C38E900498B2A /* RxSwift.framework */,
 			);
@@ -223,12 +231,16 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CarthageFrameworkTest.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CarthageFrameworkTest.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

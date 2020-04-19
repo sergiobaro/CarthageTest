@@ -7,19 +7,16 @@
 //
 
 import UIKit
-import RxSwift
+import CarthageFrameworkTest
 
 class ViewController: UIViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
 
-    _ = Observable.just(1)
-      .subscribe { (event) in
-        print(event)
-      }
+    let vc = CarthageFrameworkTest.ViewController(nibName: "ViewController", bundle: Bundle(for: CarthageFrameworkTest.ViewController.self))
+
+    let nc = UINavigationController(rootViewController: vc)
+    present(nc, animated: true)
   }
-
-
 }
-
